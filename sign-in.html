@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - NewsApp</title>
+    <link rel="stylesheet" href="sign-in.css">
+    <script src="sign-in.js" defer></script>
+</head>
+
+<body>
+    
+
+    <main class="signin-page">
+        <div class="container">
+            <h2>Sign In</h2>
+            <form id="signin-form" class="signin-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="signin-button">Sign In</button>
+            </form>
+            <p class="signup-link">Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+        </div>
+    </main>
+
+    
+
+
+</body>
+
+<script>
+    document.getElementById("signin-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (!email || !password) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Placeholder for sign-in logic (e.g., validation against a database)
+    alert("Sign In successful!");
+
+    // You can redirect the user to a homepage after sign-in
+    window.location.href = "index.html";  // Redirect to homepage
+});
+
+</script>
+</html>

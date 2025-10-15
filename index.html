@@ -12,35 +12,35 @@
 <body>
     <nav>
         <div class="main-nav container flex">
-            <a href="" class="company-logo">
-                <img src="./images/logo.png" alt="logo">
+            <div class="logo">
+                <a href="/" class="company-logo">
+                NEWSAPP
             </a>
+            </div>
             <div class="nav-links">
                 <ul class="flex">
                     <li class="hover-link nav-item" id="cricket" onClick="onNavItemClick('cricket')">Cricket</li>
                     <li class="hover-link nav-item" id="india" onClick="onNavItemClick('india')">India</li>
-                    <li class="hover-link nav-item" id="technology" onClick="onNavItemClick('technology')">Technology
-                    </li>
+                    <li class="hover-link nav-item" id="technology" onClick="onNavItemClick('technology')">Technology</li>
                     <li class="hover-link nav-item" id="politics" onClick="onNavItemClick('politics')">Politics</li>
-
                 </ul>
             </div>
             <div class="search-bar flex">
                 <input type="text" class="news-input" id="search-text" placeholder="e.g. Science">
                 <button class="search-button" id="search-button">Search</button>
+                <!-- Sign In Button -->
+                <!-- <button class="signin-button" id="signin-button"><a href="./sign-in.html">Sign In</a></button> -->
             </div>
         </div>
     </nav>
 
-
     <main>
         <div class="cards-container container flex" id="cardscontainer">
-
-
-
+            <!-- News cards will appear here -->
         </div>
     </main>
 
+    <!-- News Card Template -->
     <template id="template-news-card">
         <div class="card">
             <div class="card-header">
@@ -53,9 +53,20 @@
                     incidunt ratione, dolore beatae quaerat voluptatum autem fugit voluptas minima eligendi facere
                     tenetur cumque. Dolorem porro, fugiat distinctio a accusamus cum!</p>
             </div>
-        </div>
+        </div> 
     </template>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 NewsApp. @rohit-tamboli</p>
+            <ul class="footer-links ">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 

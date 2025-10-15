@@ -15,7 +15,10 @@ function bindData(articles) {
 
     cardsContainer.innerHTML = "";
 
-    articles.forEach((article) => {
+    // Limit to the first 15 articles
+    const limitedArticles = articles.slice(0, 15);
+
+    limitedArticles.forEach((article) => {
         if (!article.urlToImage) return;
 
         const cardClone = newsCardTemplate.content.cloneNode(true);
@@ -23,6 +26,7 @@ function bindData(articles) {
         cardsContainer.appendChild(cardClone);
     })
 }
+
 
 function fillDataInCard(cardClone, article) {
     const newsImg = cardClone.querySelector("#news-img");
@@ -62,3 +66,21 @@ searchButton.addEventListener("click", () => {
     curSelectedNav?.classList.remove("active");
     curSelectedNav = null;
 })
+
+
+// Add this JavaScript to detect scroll direction on mobile
+let lastScrollTop = 0;
+const navbar = document.querySelector('nav');
+
+window.addEventListener('scroll', function () {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    // If the user scrolls down, hide the navbar
+    if (currentScroll > lastScrollTop) {
+        navbar.classList.add('navbar-hidden');
+    } else {
+        navbar.classList.remove('navbar-hidden');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Ensure we don't go negative
+}, false);
